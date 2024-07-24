@@ -136,9 +136,26 @@
             max-width: 720px; /* 기존의 2.4배 */
             margin: 0 auto;
         }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            margin-bottom: 20px;
+            font-size: 30px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .header-content img {
+            margin-right: 20px;
+        }
     </style>
 </head>
 <body>
+    <div class="header-content">
+        <img src="https://i.imgur.com/2MkyDCh.png" alt="Logo" style="width: 120px; height: auto;">
+        <h1>파란행성 동영상 변환 사이트</h1>
+    </div>
     <div class="container">
         <div class="file-input-wrapper">
             <input type="file" id="videoInput" accept="video/*">
