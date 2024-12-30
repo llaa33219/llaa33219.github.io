@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>동영상 이미지 변환</title>
+    <title>Video to Image Conversion</title>
     <link rel="icon" href="https://i.imgur.com/2MkyDCh.png" type="image/png">
     <style>
         body {
@@ -13,15 +13,15 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            font-family: 'Arial', sans-serif; /* 고딕체 스타일 적용 */
+            font-family: 'Arial', sans-serif;
         }
 
         .file-input-wrapper {
             position: relative;
             width: 100%;
-            max-width: 720px; /* 기존의 2.4배 */
+            max-width: 720px;
             margin: 10px 0;
-            text-align: center; /* 중앙 정렬 추가 */
+            text-align: center;
         }
 
         .file-input-wrapper input[type="file"] {
@@ -60,7 +60,7 @@
         #fileName {
             margin: 10px 0;
             font-size: 25px;
-            text-align: center; /* 중앙 정렬 추가 */
+            text-align: center;
         }
 
         button#extractFrames {
@@ -71,7 +71,7 @@
             padding: 10px 20px;
             margin: 20px 0;
             width: 100%;
-            max-width: 720px; /* 기존의 2.4배 */
+            max-width: 720px;
             height: 61px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             cursor: pointer;
@@ -97,15 +97,15 @@
             text-align: center;
             margin-bottom: 20px;
             position: relative;
-            width: 100%; /* 100%로 조정 */
-            max-width: 864px; /* 720px의 1.2배 */
+            width: 100%;
+            max-width: 864px;
         }
 
         #progress {
             width: 100%;
             background-color: #f3f3f3;
-            border-radius: 24px; /* 15px의 1.6배 */
-            height: 24px; /* 15px의 1.6배 */
+            border-radius: 24px;
+            height: 24px;
             margin: 0 auto;
             position: relative;
         }
@@ -113,8 +113,8 @@
         #progress-bar {
             width: 0%;
             height: 100%;
-            background-color: #007BFF; /* 파랑색 */
-            border-radius: 24px; /* 15px의 1.6배 */
+            background-color: #007BFF;
+            border-radius: 24px;
         }
 
         #progress-text {
@@ -133,7 +133,7 @@
         .container {
             text-align: center;
             width: 100%;
-            max-width: 720px; /* 기존의 2.4배 */
+            max-width: 720px;
             margin: 0 auto;
         }
 
@@ -154,21 +154,21 @@
 <body>
     <div class="header-content">
         <img src="https://i.imgur.com/2MkyDCh.png" alt="Logo" style="width: 120px; height: auto;">
-        <h1>파란행성 동영상 변환 사이트</h1>
+        <h1>BLOUplanet Video Conversion Site</h1>
     </div>
     <div class="container">
         <div class="file-input-wrapper">
             <input type="file" id="videoInput" accept="video/*">
-            <button id="fileButton">파일 선택</button>
+            <button id="fileButton">Select File</button>
         </div>
-        <div id="fileName">선택된 파일 없음</div>
+        <div id="fileName">No file selected</div>
         <div id="loading">
             <div id="progress">
                 <div id="progress-bar"></div>
                 <div id="progress-text">0%</div>
             </div>
         </div>
-        <button id="extractFrames">변환</button>
+        <button id="extractFrames">Convert</button>
         <div id="framesContainer"></div>
     </div>
     <script>
@@ -177,7 +177,7 @@
         });
 
         document.getElementById('videoInput').addEventListener('change', (event) => {
-            const fileName = event.target.files[0] ? event.target.files[0].name : '선택된 파일 없음';
+            const fileName = event.target.files[0] ? event.target.files[0].name : 'No file selected';
             document.getElementById('fileName').textContent = fileName;
         });
 

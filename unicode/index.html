@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en"></html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>특수문자 복사</title>
+<title>Special Character Copy</title>
 <link rel="icon" href="https://i.imgur.com/2MkyDCh.png" type="image/png">
 <style>
     body {
@@ -73,9 +73,9 @@
     function copyToClipboard(text) {
     if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text).then(() => {
-            alert(`${text} 복사되었습니다!`);
+            alert(`${text} copied!`);
         }).catch(err => {
-            alert('복사에 실패했습니다.');
+            alert('Failed to copy.');
         });
     } else {
         // Fallback for older browsers
@@ -87,9 +87,9 @@
         textArea.select();
         try {
             document.execCommand('copy');
-            alert(`${text} 복사되었습니다!`);
+            alert(`${text} copied!`);
         } catch (err) {
-            alert('복사에 실패했습니다.');
+            alert('Failed to copy.');
         }
         document.body.removeChild(textArea);
     }
@@ -164,27 +164,27 @@
 <body onload="displayUnicode()">
 <div class="header-content">
     <img src="https://i.imgur.com/2MkyDCh.png" alt="Logo" style="width: 120px; height: auto;">
-    <h1>파란행성 특수문자 복사 사이트</h1>
+    <h1>BLOUplanet Special Character Copy Site</h1>
 </div>
-<span class="copy-text">[글자를 클릭해서 복사하시오]</span>
+<span class="copy-text">[Click the character to copy]</span>
 <div>
-    <h2>속담 알파벳 확장 (A960–A97F)</h2>
+    <h2>Proverb Alphabet Extension (A960–A97F)</h2>
     <div id="range1" class="unicode-container"></div>
 </div>
 <div>
-    <h2>자바어 (A980–A9DF)</h2>
+    <h2>Javanese (A980–A9DF)</h2>
     <div id="range2" class="unicode-container"></div>
 </div>
 <div>
-    <h2>베트남 Daiwen (AA80–AADF)</h2>
+    <h2>Vietnamese Daiwen (AA80–AADF)</h2>
     <div id="range3" class="unicode-container"></div>
 </div>
 <div>
-    <h2>I Ching hexagram의 기호 (4DC0–4DFF)</h2>
+    <h2>I Ching Hexagram Symbols (4DC0–4DFF)</h2>
     <div id="range4" class="unicode-container"></div>
 </div>
 <div>
-    <h2>이순신 언어의 뿌리 (A490–A4CF)</h2>
+    <h2>Root of Yi Sun-sin Language (A490–A4CF)</h2>
     <div id="range4" class="unicode-container"></div>
 </div>
 <div>
@@ -192,39 +192,39 @@
     <div id="range5" class="unicode-container"></div>
 </div>
 <div>
-    <h2>이전 리수 (A500–A63F)</h2>
+    <h2>Old Lisu (A500–A63F)</h2>
     <div id="range6" class="unicode-container"></div>
 </div>
 <div>
-    <h2>키릴 확장-B (A640–A69F)</h2>
+    <h2>Cyrillic Extended-B (A640–A69F)</h2>
     <div id="range7" class="unicode-container"></div>
 </div>
 <div>
-    <h2>톤 수정 편지 (A700–A71F)</h2>
+    <h2>Modifier Tone Letters (A700–A71F)</h2>
     <div id="range8" class="unicode-container"></div>
 </div>
 <div>
-    <h2>라틴 확장-D (A720–A7FF)</h2>
+    <h2>Latin Extended-D (A720–A7FF)</h2>
     <div id="range9" class="unicode-container"></div>
 </div>
 <div>
-    <h2>인도 수치 (A830–A83F)</h2>
+    <h2>Indic Numbers (A830–A83F)</h2>
     <div id="range10" class="unicode-container"></div>
 </div>
 <div>
-    <h2>원 총리 Pagba (A840–A87F)</h2>
+    <h2>Phags-pa (A840–A87F)</h2>
     <div id="range11" class="unicode-container"></div>
 </div>
 <div>
-    <h2>사우라 슈트라 (A880–A8DF)</h2>
+    <h2>Saurashtra (A880–A8DF)</h2>
     <div id="range12" class="unicode-container"></div>
 </div>
 <div>
-    <h2>데바 나가리 확장 (A8E0–A8FF)</h2>
+    <h2>Devanagari Extended (A8E0–A8FF)</h2>
     <div id="range13" class="unicode-container"></div>
 </div>
 <div>
-    <h2>카야 편지 (A900–A92F)</h2>
+    <h2>Kayah Li (A900–A92F)</h2>
     <div id="range14" class="unicode-container"></div>
 </div>
 <div>
@@ -232,15 +232,15 @@
     <div id="range15" class="unicode-container"></div>
 </div>
 <div>
-    <h2>타타르어 (AA00–AA5F)</h2>
+    <h2>Tai Tham (AA00–AA5F)</h2>
     <div id="range16" class="unicode-container"></div>
 </div>
 <div>
-    <h2>확장 버마어 (AA60–AA7F)</h2>
+    <h2>Myanmar Extended-A (AA60–AA7F)</h2>
     <div id="range17" class="unicode-container"></div>
 </div>
 <div>
-    <h2>에티오피아 확장-A (AB00–AB2F)</h2>
+    <h2>Ethiopic Extended-A (AB00–AB2F)</h2>
     <div id="range18" class="unicode-container"></div>
 </div>
 <div>
@@ -252,43 +252,43 @@
     <div id="range20" class="unicode-container"></div>
 </div>
 <div>
-    <h2>마니 푸리 (ABC0–ABFF)</h2>
+    <h2>Meitei Mayek (ABC0–ABFF)</h2>
     <div id="range21" class="unicode-container"></div>
 </div>
 <div>
-    <h2>이순신 언어의 뿌리 (A490–A4CF)</h2>
+    <h2>Root of Yi Sun-sin Language (A490–A4CF)</h2>
     <div id="range4" class="unicode-container"></div>
 </div>
 <div>
-    <h2>밴드 CJK 문자와 달 (3200–32FF)</h2>
+    <h2>Enclosed CJK Letters and Months (3200–32FF)</h2>
     <div id="range22" class="unicode-container"></div>
 </div>
 <div>
-    <h2>CJK 문자 세트는 호환 (3300–33FF)</h2>
+    <h2>CJK Compatibility (3300–33FF)</h2>
     <div id="range23" class="unicode-container"></div>
 </div>
 <div>
-    <h2>가타카나 소리 나는대로 확장 (31F0–31FF)</h2>
+    <h2>Katakana Phonetic Extensions (31F0–31FF)</h2>
     <div id="range24" class="unicode-container"></div>
 </div>
 <div>
-    <h2>CJK는 스트로크 (31C0–31EF)</h2>
+    <h2>CJK Strokes (31C0–31EF)</h2>
     <div id="range25" class="unicode-container"></div>
 </div>
 <div>
-    <h2>확장 된 음성 알파벳 (31A0–31BF)</h2>
+    <h2>Extended Phonetic Alphabet (31A0–31BF)</h2>
     <div id="range26" class="unicode-container"></div>
 </div>
 <div>
-    <h2>상형 기호주의 사항 (3190–319F)</h2>
+    <h2>Ideographic Annotation (3190–319F)</h2>
     <div id="range27" class="unicode-container"></div>
 </div>
 <div>
-    <h2>한글 알파벳 호환 (3130–318F)</h2>
+    <h2>Hangul Compatibility Alphabet (3130–318F)</h2>
     <div id="range28" class="unicode-container"></div>
 </div>
 <div>
-    <h2>이순신 음절 (A000–A48F)</h2>
+    <h2>Yi Syllables (A000–A48F)</h2>
     <div id="range29" class="unicode-container"></div>
 </div>
 

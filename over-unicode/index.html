@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en"></html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>겹치는 특수문자 복사</title>
+<title>Copy Overlapping Special Characters</title>
 <link rel="icon" href="https://i.imgur.com/2MkyDCh.png" type="image/png">
 <style>
     body {
@@ -73,9 +73,9 @@
     function copyToClipboard(text) {
     if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text).then(() => {
-            alert(`${text} 복사되었습니다!`);
+            alert(`${text} copied!`);
         }).catch(err => {
-            alert('복사에 실패했습니다.');
+            alert('Failed to copy.');
         });
     } else {
         // Fallback for older browsers
@@ -87,9 +87,9 @@
         textArea.select();
         try {
             document.execCommand('copy');
-            alert(`${text} 복사되었습니다!`);
+            alert(`${text} copied!`);
         } catch (err) {
-            alert('복사에 실패했습니다.');
+            alert('Failed to copy.');
         }
         document.body.removeChild(textArea);
     }
@@ -101,11 +101,11 @@
 <body onload="displayUnicode()">
 <div class="header-content">
     <img src="https://i.imgur.com/2MkyDCh.png" alt="Logo" style="width: 120px; height: auto;">
-    <h1>겹치는 특수문자 복사 사이트</h1>
+    <h1>Copy Overlapping Special Characters</h1>
 </div>
-<span class="copy-text">[글자를 클릭해서 복사하시오]</span>
+<span class="copy-text">[Click the character to copy]</span>
 <br><br>
-<h2>투명, 곂치는 문자</h2>
+<h2>Transparent, Overlapping Characters</h2>
 <div class="unicode-container">
     <span class="unicode-char" onclick="copyToClipboard('ꢶ')">ꢶ</span>
     <span class="unicode-char" onclick="copyToClipboard('꣄')">꣄</span>
@@ -128,7 +128,7 @@
     <span class="unicode-char" onclick="copyToClipboard('꣺')">꣺</span>
     <span class="unicode-char" onclick="copyToClipboard('ㅤ')">ㅤ</span>
 </div>
-<h2>영어와 비슷한 문자</h2>
+<h2>Characters Similar to English</h2>
 <div class="unicode-container">
     <span class="unicode-char" onclick="copyToClipboard('ꓐ')">ꓐ</span>
     <span class="unicode-char" onclick="copyToClipboard('ꓑ')">ꓑ</span>
@@ -155,7 +155,7 @@
     <span class="unicode-char" onclick="copyToClipboard('Ꜳ')">Ꜳ</span>
     <span class="unicode-char" onclick="copyToClipboard('Ɦ')">Ɦ</span>
 </div>
-<h2>기호</h2>
+<h2>Symbols</h2>
 <div class="unicode-container">
     <span class="unicode-char" onclick="copyToClipboard('ꓸ')">ꓸ</span>
     <span class="unicode-char" onclick="copyToClipboard('ꓹ')">ꓹ</span>

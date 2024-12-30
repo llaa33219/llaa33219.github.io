@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en"></html>
 <head>
     <meta charset="UTF-8">
-    <title>GIF프사 만들기</title>
+    <title>Create GIF Profile Picture</title>
     <link rel="icon" href="https://i.imgur.com/2MkyDCh.png" type="image/png">
     <style>
         .file-upload-wrapper {
@@ -73,12 +73,12 @@
     <div class="file-upload-wrapper">
         <div class="header-content">
             <img src="https://i.imgur.com/2MkyDCh.png" alt="Logo" style="width: 120px; height: auto;">
-            <h1>파란행성 SVG 변환 사이트</h1>
+            <h1>BLOUplanet SVG Conversion Site</h1>
         </div>
-        <button id="custom-button">여기를 클릭해 GIF파일을 선택하세요</button>
+        <button id="custom-button">Click here to select a GIF file</button>
         <input type="file" id="hidden-file-input" accept="image/gif" style="display: none;" />
-        <div id="file-name">파일이 선택되지 않았습니다.</div>
-        <button id="upload-button">여기를 클릭해 다운로드</button>
+        <div id="file-name">No file selected.</div>
+        <button id="upload-button">Click here to download</button>
     </div>
 
     <script>
@@ -94,18 +94,18 @@ document.getElementById('hidden-file-input').addEventListener('change', function
 document.getElementById('upload-button').addEventListener('click', function() {
     const file = document.getElementById('hidden-file-input').files[0];
     if (!file) {
-        alert('GIF파일을 선택한 후 다운로드가 가능합니다.');
+        alert('Please select a GIF file before downloading.');
     } else {
-        // 파일이 선택되었을 때 SVG 변환 처리
+        // Process the SVG conversion when a file is selected
         const reader = new FileReader();
         reader.onload = function(e) {
             const img = new Image();
             img.onload = function() {
-                // 이미지가 로드되면 SVG의 크기를 설정
+                // Set the size of the SVG when the image is loaded
                 const svgData = `<svg xmlns="http://www.w3.org/2000/svg" width="${this.width}px" height="${this.height}px">
                                     <image href="${e.target.result}" width="${this.width}px" height="${this.height}px"/>
                                  </svg>`;
-                // SVG 다운로드
+                // Download the SVG
                 const downloadLink = document.createElement('a');
                 downloadLink.href = 'data:image/svg+xml;base64,' + window.btoa(unescape(encodeURIComponent(svgData)));
                 downloadLink.download = 'image.svg';
@@ -118,7 +118,6 @@ document.getElementById('upload-button').addEventListener('click', function() {
         reader.readAsDataURL(file);
     }
 });
-
     </script>
 </body>
 </html>
